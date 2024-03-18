@@ -1,4 +1,4 @@
-# Exam Depository
+# 📝 Exam Depository
 
 This is a sample backend project for collecting student exam answers. 
 
@@ -60,9 +60,9 @@ Authenticated examainers and unauthenticated students.
 
 ### Core Decisions
 
-+ Using Fly.io to host the application on free tier plan
-+ Use CI/CD pipeline with GitHub Actions for deployment
-- API key available through endpoint route
+* Using Fly.io to host the application on free tier plan
+* Use CI/CD pipeline with GitHub Actions for deployment
+* API key available through endpoint route
 
 
 ### Technologies
