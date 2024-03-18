@@ -33,7 +33,7 @@ The application persists students exam submissions and serves the submitted file
 
 ### Key Stakeholder
 
-Authenticated examainers and students.
+Authenticated examainers and unauthenticated students.
 
 
 ### Core Functions
