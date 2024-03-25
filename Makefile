@@ -1,4 +1,4 @@
-.PHONY: deps lint shell migration migrate_current migrate_up migrate_down server test postgres_up postgres_down docker_up docker_down
+.PHONY: deps lint shell migration migrate_current migrate_up migrate_down server test test_once postgres_up postgres_down docker_up docker_down
 
 deps:
 	poetry install

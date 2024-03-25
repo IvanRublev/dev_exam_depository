@@ -17,6 +17,7 @@ build/
 *.sqlite
 
 # Environments
+.envrc
 .env
 .venv
 env/
@@ -41,6 +42,3 @@ build/
 
 # Poetry
 /poetry.lock
-
-# Environment variables
-.envrc
