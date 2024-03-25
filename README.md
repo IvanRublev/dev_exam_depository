@@ -14,10 +14,14 @@ Any files you upload to the service will be stored in the EU and automatically d
 2. Load environment variables use `direnv allow` in the project's directory
 3. Make sure that you have python and poetry installed with `asdf install`
 3. Install project dependencies with `make deps`
-4. Start PostgreSQL container with `make postgres_up`
+4. Start PostgreSQL and MinIO containers with `make containers_up`
 5. Migrate database with `make migrate_up`
 6. Run tests with `make tests`, run server with `make server`
 
+After uploading submissions, you can view them in the MinIO web GUI on http://localhost:9000
+
+Runtime errors associated with response code 500 can be found in the `errors` table in the PostgreSQL database.
+You can list them with the following command: `psql postgresql://postgres:postgres@localhost:5432/exam_depository_dev -c "SELECT * FROM errors ORDER BY id DESC LIMIT 10;"`
 
 ## Deployment
 

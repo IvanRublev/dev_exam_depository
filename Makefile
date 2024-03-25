@@ -1,4 +1,4 @@
-.PHONY: deps lint shell migration migrate_current migrate_up migrate_down server test test_once postgres_up postgres_down docker_up docker_down
+.PHONY: deps lint shell migration migrate_current migrate_up migrate_down server test test_once containers_up containers_down docker_up docker_down
 
 deps:
 	poetry install
@@ -35,11 +35,11 @@ test_once:
 	poetry run alembic upgrade head; \
 	poetry run pytest -s
 
-postgres_up:
-	docker-compose -f docker-compose-postgres.yml up -d
+containers_up:
+	docker-compose up -d
 
-postgres_down:
-	docker-compose -f docker-compose-postgres.yml down
+containers_down:
+	docker-compose down
 
 docker_up:
 	docker build -t exam-depository . && docker run -d -e ENV=PROD -e AUTH_TOKEN=$${AUTH_TOKEN} -e DATABASE_URL=postgresql://postgres:postgres@host.docker.internal:5432/exam_depository_dev -e PORT=$${PORT} -p $${PORT}:$${PORT} exam-depository

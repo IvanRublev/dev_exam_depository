@@ -17,7 +17,7 @@ build/
 *.sqlite
 
 # Environments
-.envrc
+.envrc*
 .env
 .venv
 env/
